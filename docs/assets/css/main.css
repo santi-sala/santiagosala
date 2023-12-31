@@ -2149,6 +2149,10 @@ body {
   padding: 6em 0 6em 0;
 }
 
+.main.style4 {
+  padding: 2em 0 0em 0;
+}
+
 .main.style3 .content > header {
   margin-bottom: 2em;
 }
@@ -2183,6 +2187,10 @@ body {
 
 .main.dark .button.style2.down {
   background-image: url("images/dark-arrow.svg");
+}
+
+.main.dark .button.style2.up {
+  background-image: url("images/dark-arrow-up.svg");
 }
 
 body.is-touch .main {
@@ -2403,4 +2411,15 @@ body.is-touch .main {
   #contact .box {
     padding: 1em 1em 2em 1em;
   }
+}
+
+.project-change {
+  height: 2px;
+  border-width: 0;
+  margin: 1em 5em;
+  background-color: rgb(216, 140, 234);
+}
+
+.corners-rounded {
+  border-radius: 25px;
 }
