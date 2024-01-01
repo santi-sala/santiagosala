@@ -7,15 +7,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
   </head>
   <body class="is-preload">
     <!-- Header -->
-    <header id="header">
-      <h1>Santiago Sala</h1>
+    <header id="header" style="background-color: rgb(39, 36, 36)">
+      <h1 style="font-size: 1.5em; line-height: 2em">Santiago Sala</h1>
       <nav>
         <ul>
           <li><a href="#intro">Intro</a></li>
@@ -85,19 +86,19 @@
     <section
       id="work"
       class="main style3 primary"
-      style="background-color: rgb(240, 224, 188)"
+      style="background-color: rgb(240, 224, 188); padding: 2em 0 2em 0"
     >
       <div class="content">
         <header>
-          <h2 style="text-align: left">Projects</h2>
+          <h2 style="text-align: left; color: rgb(65, 62, 62)">Projects</h2>
         </header>
 
         <!-- BuggerOff!  -->
         <div id="buggerOff">
-          <section id="buggerOff-description">
+          <section id="buggerOff-info">
             <header
               class="main style3 style4 secondary corners-rounded"
-              style="background-color: rgb(169, 235, 103)"
+              style="background-color: rgb(70, 72, 68)"
             >
               <div class="content">
                 <header>
@@ -105,11 +106,14 @@
                   <ul style="text-align: left">
                     <li>
                       <p>
-                        <strong>Description:</strong> Lorem, ipsum dolor sit
-                        amet consectetur adipisicing elit. Officia adipisci non
-                        unde. Dolorem, vel minima facilis, quidem temporibus
-                        harum blanditiis, dignissimos asperiores esse unde
-                        explicabo amet. Quod aspernatur voluptate aliquid?
+                        <strong>Description:</strong> Bugger Off! is an engaging
+                        tower-defence game for casual players who enjoy the
+                        tower-defence genre, and cartoony aesthetics. The game
+                        set in a world where insects have been magnified to
+                        colossal proportions by Dr. Thaddeus Hopperdoodle. In
+                        the game, player takes the role of a rookie military
+                        frog trainer to save the world from Dr. Hopperdoodle and
+                        his bug army.
                       </p>
                     </li>
                     <li>
@@ -120,6 +124,46 @@
                     </li>
                   </ul>
                 </header>
+
+                <!-- Video -->
+                <div class="experience" style="display: block">
+                  <button class="job-card" type="button" style="width: 100%">
+                    <section>
+                      <div class="job-card-video">
+                        <video loop autoplay muted preload="auto">
+                          <source
+                            src="./assets/Videos/BuggerOffTrailer.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+
+                      <!-- Can be skipped-->
+                      <!--
+                      <div class="video-additional-info">
+                        <div class="team-size">
+                          <span class="fa fa-users" ="true"> 5 </span>
+                        </div>
+                        <div class="time">
+                          <span class="fa fa-user-clock"> 4 months </span>
+                        </div>
+                        <div class="water-mark">
+                          <span class="fa fa-cogs"> Unity </span>
+                        </div>
+                      </div>
+                      <h3 class="clickable-card-header">
+                        Bugger Off!
+                        <small style="font-size: 60%"
+                          >Scrum Master and Technical artist</small
+                        >
+                      </h3>
+                      -->
+                      <!-- Can be skipped-->
+                    </section>
+                  </button>
+                </div>
+
+                <!-- Video -->
 
                 <!--Projects Screenshots-->
                 <div id="buggerOff-gallery" class="gallery">
@@ -252,7 +296,11 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="main style3 secondary">
+    <section
+      id="contact"
+      class="main style3 secondary"
+      style="background-color: rgb(65, 63, 70)"
+    >
       <div class="content">
         <header>
           <h2>Say Hello!</h2>
@@ -261,8 +309,17 @@
             the main channels i use.
           </p>
         </header>
-        <div class="box">
-          <ul class="actions special">
+        <div
+          class="box"
+          style="
+            width: 65%;
+            margin: auto;
+            border-radius: 25px;
+            background-color: beige;
+            margin-bottom: 2.5em;
+          "
+        >
+          <ul class="actions special" style="padding-top: 0.25em">
             <!-- Linkedin-->
             <li>
               <a
