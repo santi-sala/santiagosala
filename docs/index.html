@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Santiago Sala</title>
+    <title>Santiago Sala | Portfolio</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -16,70 +16,48 @@
   <body class="is-preload">
     <!-- Header -->
     <header id="header" style="background-color: rgb(39, 36, 36)">
-      <h1 style="font-size: 1.5em; line-height: 2em">Santiago Sala</h1>
+      <h1 style="font-size: 1.5em; line-height: 2em; letter-spacing: 0.05em">
+        Santiago Sala
+      </h1>
       <nav>
         <ul>
+          <li><a href="./../Pages/resume.html" target="_blank">Resume</a></li>
           <li><a href="#intro">Intro</a></li>
-          <li><a href="#one">What I Do</a></li>
-          <li><a href="#two">Who I Am</a></li>
           <li><a href="#work">Projects</a></li>
+          <li><a href="#one">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Intro -->
-    <section id="intro" class="main style1 dark fullscreen">
+    <section id="intro" class="main style1 dark" style="margin-top: 3em">
       <div class="content">
         <header>
-          <h2>Hello.</h2>
+          <img
+            src="./images/fulls/Profile/pipo_big.jpeg"
+            alt="Profile picture of Santiago Sala"
+            class="profile-image"
+            style="
+              border: 2px solid rgb(162, 218, 248);
+              max-width: 500px;
+              max-height: 500px;
+              border-radius: 100%;
+            "
+          />
         </header>
-        <p>
-          Welcome to
-          <a
-            href="https://www.linkedin.com/in/santiago-sala-b9ab39a8/"
-            target="_blank"
-            >Santiago's</a
-          >
-          protfolio.<br />
-          Enjoy your stay!
+        <p style="font-size: 1.5em">
+          Technical artist with emphasis on creating tools, UI, rigging and
+          implementing animations. <br />I like to be the middle man between
+          artists and programmers.
         </p>
+        <!--
+
         <footer>
           <a href="#one" class="button style2 down">More</a>
         </footer>
+        -->
       </div>
-    </section>
-
-    <!-- One -->
-    <section id="one" class="main style2 right dark fullscreen">
-      <div class="content box style2">
-        <header>
-          <h2>What I Do (WIP)</h2>
-        </header>
-        <p>
-          Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore
-          condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus
-          eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur
-          egestas consectetur magna.
-        </p>
-      </div>
-      <a href="#two" class="button style2 down anchored">Next</a>
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="main style2 left dark fullscreen">
-      <div class="content box style2">
-        <header>
-          <h2>Who I Am (WIP)</h2>
-        </header>
-        <p>
-          Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore
-          condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus
-          eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur
-          egestas consectetur magna.
-        </p>
-      </div>
-      <a href="#work" class="button style2 down anchored">Next</a>
     </section>
 
     <!-- Work -->
@@ -102,18 +80,14 @@
             >
               <div class="content">
                 <header>
-                  <h2>BuggerOff</h2>
-                  <ul style="text-align: left">
+                  <h2 style="font-size: 2.5em">BuggerOff</h2>
+                  <ul style="text-align: left; font-size: 1.5em">
                     <li>
                       <p>
                         <strong>Description:</strong> Bugger Off! is an engaging
-                        tower-defence game for casual players who enjoy the
-                        tower-defence genre, and cartoony aesthetics. The game
-                        set in a world where insects have been magnified to
-                        colossal proportions by Dr. Thaddeus Hopperdoodle. In
-                        the game, player takes the role of a rookie military
-                        frog trainer to save the world from Dr. Hopperdoodle and
-                        his bug army.
+                        tower-defence game with cartoony aesthetics. The player
+                        needs to save the world by deploying and upgrading frogs
+                        with unique abilities.
                       </p>
                     </li>
                     <li>
@@ -122,35 +96,51 @@
                         General Support
                       </p>
                     </li>
+                    <li>
+                      <p>
+                        <strong>Contributions: </strong>
+                        As scrum master i made sure that everyone is on the same
+                        page during the projects current state and identifying
+                        future bottlenecks to make sure we deliver on time. As
+                        an animator i rigged, animate and implemented the
+                        animations according to the characters current state.
+                      </p>
+                    </li>
                   </ul>
                 </header>
 
                 <!-- Video -->
-                <div class="experience" style="display: block">
-                  <button class="job-card" type="button" style="width: 100%">
-                    <section>
-                      <div class="job-card-video">
-                        <video loop autoplay muted preload="auto">
-                          <source
-                            src="./assets/Videos/BuggerOffTrailer.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
+                <div
+                  class="experience"
+                  style="display: block; margin-bottom: 0px"
+                >
+                  <div
+                    class="job-card"
+                    type="button"
+                    style="width: 100%; margin: auto; padding-bottom: 0px"
+                  >
+                    <div class="job-card-video">
+                      <video loop autoplay muted preload="auto">
+                        <source
+                          src="./assets/Videos/BuggerOffTrailer.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
 
-                      <!-- Can be skipped-->
-                      <!--
-                      <div class="video-additional-info">
-                        <div class="team-size">
-                          <span class="fa fa-users" ="true"> 5 </span>
-                        </div>
-                        <div class="time">
-                          <span class="fa fa-user-clock"> 4 months </span>
-                        </div>
-                        <div class="water-mark">
-                          <span class="fa fa-cogs"> Unity </span>
-                        </div>
+                    <!-- Can be skipped-->
+                    <div class="video-additional-info">
+                      <div class="team-size">
+                        <span class="fa fa-users" ="true"> 5 </span>
                       </div>
+                      <div class="time">
+                        <span class="fa fa-user-clock"> 4 months </span>
+                      </div>
+                      <div class="water-mark">
+                        <span class="fa fa-cogs"> Unity </span>
+                      </div>
+                    </div>
+                    <!--
                       <h3 class="clickable-card-header">
                         Bugger Off!
                         <small style="font-size: 60%"
@@ -158,9 +148,8 @@
                         >
                       </h3>
                       -->
-                      <!-- Can be skipped-->
-                    </section>
-                  </button>
+                    <!-- Can be skipped-->
+                  </div>
                 </div>
 
                 <!-- Video -->
@@ -238,6 +227,7 @@
                           class="button"
                           href="./../Pages/BuggerOff.html"
                           target="_blank"
+                          style="background-color: rgb(245, 157, 63)"
                           >More about Bugger Off!</a
                         >
                       </li>
@@ -293,6 +283,37 @@
 
         <!-- Roasted potatoes-->
       </div>
+    </section>
+
+    <!-- One -->
+    <section id="one">
+      <section class="main style2 right" style="padding-bottom: 0px">
+        <div class="content box style2">
+          <header>
+            <h2>What I Do (WIP)</h2>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore
+            condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus
+            eu. Sed sodales venenatis arcu, id varius justo euismod in.
+            Curabitur egestas consectetur magna.
+          </p>
+        </div>
+      </section>
+      <!-- Two -->
+      <section class="main style2 left">
+        <div class="content box style2">
+          <header>
+            <h2>Who I Am (WIP)</h2>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore
+            condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus
+            eu. Sed sodales venenatis arcu, id varius justo euismod in.
+            Curabitur egestas consectetur magna.
+          </p>
+        </div>
+      </section>
     </section>
 
     <!-- Contact -->
