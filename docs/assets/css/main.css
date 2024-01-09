@@ -1404,6 +1404,7 @@ table.default tfoot {
   cursor: default;
   z-index: 1;
   font-size: 0.9em;
+  color: black;
 }
 
 .poptrox-popup .nav-next,
