@@ -16,9 +16,9 @@
   </head>
   <body>
     <!-- Header -->
-    <header id="header">
-      <h1 style="font-size: 1.5em; line-height: 2em">
-        Santiago Sala | Bugger Off!
+    <header id="header" style="background-color: rgb(39, 36, 36)">
+      <h1 style="font-size: 1.5em; line-height: 2em; letter-spacing: 0.05em">
+        Santiago Sala
       </h1>
       <nav>
         <ul>
@@ -29,29 +29,31 @@
               >Resume</a
             >
           </li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Intro -->
-    <section id="intro" class="main style1 dark fullscreen">
-      <div class="content">
+    <section
+      id="intro"
+      class="main style1 dark"
+      style="
+        background: linear-gradient(
+          203deg,
+          rgba(214, 198, 11, 1) 0%,
+          rgba(4, 159, 66, 1) 100%
+        );
+      "
+    >
+      <div class="content" style="margin-top: 3em">
         <header>
-          <h2>Bugger Off!</h2>
+          <h2 style="color: black">Bugger Off!</h2>
         </header>
         <p>
-          More information comming soon.
-          <!--
-
-              <a
-              href="https://www.linkedin.com/in/santiago-sala-b9ab39a8/"
-              target="_blank"
-              >
-              </a
-              > 
-            -->
-          protfolio.<br />
-          Enjoy your stay!
+          Bugger Off! is an engaging tower-defence game with cartoony
+          aesthetics. The player needs to save the world by deploying and
+          upgrading frogs with unique abilities.
         </p>
         <!--Project Links-->
         <section id="buggerOff-links" style="padding-top: 2em">
@@ -86,6 +88,22 @@
           </ul>
         </section>
         <!--Project Links-->
+
+        <!-- Video -->
+        <section class="experience" style="display: block">
+          <div style="width: 100%; margin: auto; padding-bottom: 0px">
+            <div class="job-card-video">
+              <video controls playsinline autoplay muted preload="auto">
+                <source
+                  src="./../docs/assets/Videos/BuggerOffTrailer.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </section>
+        <!-- Video -->
       </div>
     </section>
 
@@ -139,41 +157,6 @@
                     </li>
                   </ul>
                 </header>
-
-                <!-- Video -->
-                <section
-                  class="experience"
-                  style="display: block; margin-bottom: 0px"
-                >
-                  <div
-                    class="job-card"
-                    type="button"
-                    style="width: 100%; margin: auto; padding-bottom: 0px"
-                  >
-                    <div class="job-card-video">
-                      <video playsinline loop autoplay muted preload="auto">
-                        <source
-                          src="./../docs/assets/Videos/BuggerOffTrailer.mp4"
-                          type="video/mp4"
-                        />
-                      </video>
-                    </div>
-
-                    <!-- Can be skipped-->
-                    <div class="video-additional-info">
-                      <div class="team-size">
-                        <span class="fa fa-users" ="true"> 5 </span>
-                      </div>
-                      <div class="time">
-                        <span class="fa fa-user-clock"> 4 months (2023) </span>
-                      </div>
-                      <div class="water-mark">
-                        <span class="fa fa-cogs"> Unity </span>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <!-- Video -->
 
                 <!--Projects Screenshots-->
                 <div
@@ -261,6 +244,68 @@
         <!-- BuggerOff! -->
       </div>
     </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="main style3 secondary"
+      style="background-color: rgb(65, 63, 70)"
+    >
+      <div class="content">
+        <header>
+          <h2>Say Hello!</h2>
+          <p>
+            If you want to know more about me, my work or contact me, bellow are
+            the main channels i use.
+          </p>
+        </header>
+        <div
+          class="box"
+          style="
+            width: 65%;
+            margin: auto;
+            border-radius: 25px;
+            background-color: beige;
+            margin-bottom: 2.5em;
+          "
+        >
+          <ul
+            class="actions special"
+            style="padding-top: 0; padding-bottom: -10px"
+          >
+            <!-- Linkedin-->
+            <li style="max-height: 64px">
+              <a
+                href="https://www.linkedin.com/in/santiago-sala-b9ab39a8/"
+                target="_blank"
+                ><img
+                  src="./../docs/images/icons/linkedin64.png"
+                  alt="Linkedin icon with link to Santiago Sala's linkedin page."
+              /></a>
+            </li>
+            <!-- GitHub-->
+            <li style="max-height: 64px">
+              <a href="https://github.com/santi-sala" target="_blank"
+                ><img
+                  src="./../docs/images/icons/GitHub64.png"
+                  alt="GitHub icon with link to Santiago Sala's GitHub profile."
+              /></a>
+            </li>
+            <!-- Youtube-->
+            <li style="max-height: 64px">
+              <a
+                href="https://youtube.com/@santisala219?si=jT3lkCuNj2cIW_Re"
+                target="_blank"
+                ><img
+                  src="./../docs/images/icons/youtube64.png"
+                  alt="Youtube icon with link to Santiago Sala's Youtube page."
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
 
     <!-- Footer -->
     <footer id="footer">
