@@ -1,0 +1,56 @@
+.csharp-code-container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.csharp-code-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.csharp-code {
+  max-height: 300px; /* Adjust the initial height as needed */
+  overflow-y: hidden;
+  overflow-x: auto;
+  transition: max-height 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.csharp-code code {
+  display: block;
+  padding-left: 2.5em; /* Adjust the padding as needed */
+  position: relative;
+}
+
+.csharp-code code::before {
+  content: ""; /* Empty content to create a space for line numbers */
+  display: inline-block;
+  width: 2em; /* Adjust the width as needed */
+  margin-right: 1em; /* Adjust the margin as needed */
+  text-align: right;
+  color: #999;
+  counter-increment: linenumber; /* Increment line numbers */
+}
+
+.csharp-code code::after {
+  content: counter(linenumber); /* Display line numbers */
+}
+
+.expand-button {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #0066cc;
+  text-decoration: underline;
+  position: absolute;
+  left: 0;
+}
+
+.expand-button.show-less {
+  position: absolute;
+  left: 0;
+}

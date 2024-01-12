@@ -9,6 +9,13 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+
+    <link rel="stylesheet" href="testing.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -354,6 +361,7 @@
                     background-color: rgb(95, 85, 85);
                     padding: 1em;
                     border-radius: 0px 25px 0px 25px;
+                    margin-bottom: 2em;
                   "
                 >
                   <h3
@@ -366,7 +374,13 @@
                   >
                     Tutorial Scene
                   </h3>
-                  <p style="margin-top: 0; margin-bottom: 1.5em">
+                  <p
+                    style="
+                      margin-top: 0;
+                      margin-bottom: 1.5em;
+                      font-size: 1.2em;
+                    "
+                  >
                     One of the feedbacks we got from our testing sessions was
                     that the UX had to be improved. Players had some troubles
                     understanding th UI. Therefore we decided to create a
@@ -377,7 +391,10 @@
                   </p>
 
                   <!-- Tutorial Video -->
-                  <section class="experience" style="display: block">
+                  <section
+                    class="experience"
+                    style="display: block; margin-bottom: 0"
+                  >
                     <div style="width: 100%; margin: auto; padding-bottom: 0px">
                       <div class="job-card-video">
                         <video
@@ -399,6 +416,162 @@
                   <!-- Tutorial Video -->
                 </section>
                 <!-- Tutorial Scene  -->
+
+                <!-- Code anippets  -->
+                <section
+                  id="buggeroff-code-snippet"
+                  class="job-card"
+                  style="
+                    text-align: left;
+                    background-color: rgb(95, 85, 85);
+                    padding: 1em;
+                    border-radius: 25px 0px 25px 0px;
+                    font-size: 1.2em;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 1.5em;
+                      padding-bottom: 0.5em;
+                      text-align: center;
+                      letter-spacing: 0.05em;
+                    "
+                  >
+                    Code Snippets
+                  </h3>
+                  <p style="margin-top: 0">
+                    Bellow are some of the coe i made for the projects.
+                  </p>
+
+                  <!--This-->
+                  <div class="csharp-code-container">
+                    <h1>Sup</h1>
+                    <div style="margin-left: -280px">
+                      <!-- Your C# code block will go here -->
+                      <pre
+                        class="csharp-code language-csharp"
+                        style="overflow-y: hidden"
+                      >
+                            <code>
+                                // Your C# code goes here
+                                using UnityEngine;
+                                public class ListeningToMouseClicks : MonoBehaviour
+                                {
+                                    void Start()
+                                    {
+                                        Levels.instance.OnSideBarMoveOut += _onMouseClick_OnSideBarMoveOut;
+                                        Levels.instance.OnFrogIsSelected += Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing += Placing_OnPlacing;
+                                    }
+                
+                                    private void Instance_OnFrogIsSelected(object sender, System.EventArgs e)
+                                    {
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                
+                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing -= Placing_OnPlacing;
+                                    }
+                
+                                    private void Placing_OnPlacing(FrogSM obj)
+                                    {
+                                        TutorialManager.Instance.DisableTutorialPanel();
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                                    }
+                
+                                    private void _onMouseClick_OnSideBarMoveOut(object sender, System.EventArgs e)
+                                    {
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                
+                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                    }
+                
+                                    public void OnDisable()
+                                    {
+                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing -= Placing_OnPlacing;
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                    <div
+                      class="expand-button"
+                      onclick="toggleCodeVisibility(this)"
+                    >
+                      Show More
+                    </div>
+                  </div>
+                  <!--This-->
+
+                  <!--This-->
+                  <div class="csharp-code-container">
+                    <h1>Sup</h1>
+                    <div style="margin-left: -280px">
+                      <!-- Your C# code block will go here -->
+                      <pre
+                        class="csharp-code language-csharp"
+                        style="overflow-y: hidden"
+                      >
+                            <code>
+                                // Your C# code goes here
+                                using UnityEngine;
+                                public class ListeningToMouseClicks : MonoBehaviour
+                                {
+                                    void Start()
+                                    {
+                                        Levels.instance.OnSideBarMoveOut += _onMouseClick_OnSideBarMoveOut;
+                                        Levels.instance.OnFrogIsSelected += Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing += Placing_OnPlacing;
+                                    }
+                
+                                    private void Instance_OnFrogIsSelected(object sender, System.EventArgs e)
+                                    {
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                
+                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing -= Placing_OnPlacing;
+                                    }
+                
+                                    private void Placing_OnPlacing(FrogSM obj)
+                                    {
+                                        TutorialManager.Instance.DisableTutorialPanel();
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                                    }
+                
+                                    private void _onMouseClick_OnSideBarMoveOut(object sender, System.EventArgs e)
+                                    {
+                                        TutorialManager.Instance.ContinueButtonpressed();
+                                        TutorialAnimation.Instance.PlayTutorialAnimation();
+                
+                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                    }
+                
+                                    public void OnDisable()
+                                    {
+                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                        Placing.OnPlacing -= Placing_OnPlacing;
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                    <div
+                      class="expand-button"
+                      onclick="toggleCodeVisibility(this)"
+                    >
+                      Show More
+                    </div>
+                  </div>
+                  <!--This-->
+                </section>
+                <!-- Code snippets  -->
               </div>
             </header>
           </section>
@@ -517,5 +690,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="testing.js"></script>
   </body>
 </html>
