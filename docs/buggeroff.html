@@ -15,7 +15,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
 
-    <link rel="stylesheet" href="testing.css" />
+    <link rel="stylesheet" href="assets/css/collapsecode.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -440,136 +440,438 @@
                     Code Snippets
                   </h3>
                   <p style="margin-top: 0">
-                    Bellow are some of the coe i made for the projects.
+                    In the project i got to implement the sounds and the tutorial scene. Bellow are some of the code I wrote.
                   </p>
 
                   <!--This-->
-                  <div class="csharp-code-container">
-                    <h1>Sup</h1>
-                    <div style="margin-left: -280px">
-                      <!-- Your C# code block will go here -->
+                  <div
+                    class="csharp-code-container"
+                    style="position: relative; text-align: center; padding-top: 1em;"
+                  >
+                    <h1
+                      style="
+                        text-align: left;
+                        color: rgb(236, 246, 201);
+                        font-weight: 500;
+                      "
+                    >
+                      Listening for events being triggered
+                    </h1>
+                    <div
+                      style="
+                        position: relative;
+                        margin-left: -320px;
+                        text-align: center;
+                      "
+                    >
                       <pre
                         class="csharp-code language-csharp"
                         style="overflow-y: hidden"
                       >
-                            <code>
-                                // Your C# code goes here
-                                using UnityEngine;
-                                public class ListeningToMouseClicks : MonoBehaviour
+                      <!--The code here -->
+                        <code>
+                            using UnityEngine;
+                            public class ListeningToMouseClicks : MonoBehaviour
+                            {
+                                void Start()
                                 {
-                                    void Start()
-                                    {
-                                        Levels.instance.OnSideBarMoveOut += _onMouseClick_OnSideBarMoveOut;
-                                        Levels.instance.OnFrogIsSelected += Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing += Placing_OnPlacing;
-                                    }
-                
-                                    private void Instance_OnFrogIsSelected(object sender, System.EventArgs e)
-                                    {
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                
-                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing -= Placing_OnPlacing;
-                                    }
-                
-                                    private void Placing_OnPlacing(FrogSM obj)
-                                    {
-                                        TutorialManager.Instance.DisableTutorialPanel();
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                                    }
-                
-                                    private void _onMouseClick_OnSideBarMoveOut(object sender, System.EventArgs e)
-                                    {
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                
-                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
-                                    }
-                
-                                    public void OnDisable()
-                                    {
-                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
-                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing -= Placing_OnPlacing;
-                                    }
+                                    Levels.instance.OnSideBarMoveOut += _onMouseClick_OnSideBarMoveOut;
+                                    Levels.instance.OnFrogIsSelected += Instance_OnFrogIsSelected;
+                                    Placing.OnPlacing += Placing_OnPlacing;
                                 }
-                            </code>
-                        </pre>
+            
+                                private void Instance_OnFrogIsSelected(object sender, System.EventArgs e)
+                                {
+                                    TutorialManager.Instance.ContinueButtonpressed();
+                                    TutorialAnimation.Instance.PlayTutorialAnimation();
+            
+                                    Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                    Placing.OnPlacing -= Placing_OnPlacing;
+                                }
+            
+                                private void Placing_OnPlacing(FrogSM obj)
+                                {
+                                    TutorialManager.Instance.DisableTutorialPanel();
+                                    TutorialManager.Instance.ContinueButtonpressed();
+                                    TutorialAnimation.Instance.PlayTutorialAnimation();
+                                }
+            
+                                private void _onMouseClick_OnSideBarMoveOut(object sender, System.EventArgs e)
+                                {
+                                    TutorialManager.Instance.ContinueButtonpressed();
+                                    TutorialAnimation.Instance.PlayTutorialAnimation();
+            
+                                    Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                }
+            
+                                public void OnDisable()
+                                {
+                                    Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
+                                    Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
+                                    Placing.OnPlacing -= Placing_OnPlacing;
+                                }
+                            }
+                        </code>
+                      </pre>
                     </div>
-                    <div
+
+                    <button
                       class="expand-button"
                       onclick="toggleCodeVisibility(this)"
+                      style="
+                        cursor: pointer;
+                        background-color: #3dafe6;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 0;
+                        text-align: center;
+                        padding: 0 12px;
+                      "
                     >
-                      Show More
-                    </div>
+                      Show more
+                    </button>
                   </div>
                   <!--This-->
 
                   <!--This-->
-                  <div class="csharp-code-container">
-                    <h1>Sup</h1>
-                    <div style="margin-left: -280px">
-                      <!-- Your C# code block will go here -->
+                  <div
+                    class="csharp-code-container"
+                    style="position: relative; text-align: center; padding-top: 1.2em;"
+                  >
+                    <h1
+                      style="
+                        text-align: left;
+                        color: rgb(236, 246, 201);
+                        font-weight: 500;
+                      "
+                    >
+                      Triggering animations depending on the current state.
+                    </h1>
+                    <div
+                      style="
+                        position: relative;
+                        margin-left: -320px;
+                        text-align: center;
+                      "
+                    >
                       <pre
                         class="csharp-code language-csharp"
                         style="overflow-y: hidden"
                       >
-                            <code>
-                                // Your C# code goes here
-                                using UnityEngine;
-                                public class ListeningToMouseClicks : MonoBehaviour
-                                {
-                                    void Start()
-                                    {
-                                        Levels.instance.OnSideBarMoveOut += _onMouseClick_OnSideBarMoveOut;
-                                        Levels.instance.OnFrogIsSelected += Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing += Placing_OnPlacing;
-                                    }
-                
-                                    private void Instance_OnFrogIsSelected(object sender, System.EventArgs e)
-                                    {
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                
-                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing -= Placing_OnPlacing;
-                                    }
-                
-                                    private void Placing_OnPlacing(FrogSM obj)
-                                    {
-                                        TutorialManager.Instance.DisableTutorialPanel();
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                                    }
-                
-                                    private void _onMouseClick_OnSideBarMoveOut(object sender, System.EventArgs e)
-                                    {
-                                        TutorialManager.Instance.ContinueButtonpressed();
-                                        TutorialAnimation.Instance.PlayTutorialAnimation();
-                
-                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
-                                    }
-                
-                                    public void OnDisable()
-                                    {
-                                        Levels.instance.OnSideBarMoveOut -= _onMouseClick_OnSideBarMoveOut;
-                                        Levels.instance.OnFrogIsSelected -= Instance_OnFrogIsSelected;
-                                        Placing.OnPlacing -= Placing_OnPlacing;
-                                    }
-                                }
-                            </code>
-                        </pre>
+                      <!--The code here -->
+                        <code>
+                          using UnityEngine;
+                          public class TutorialAnimation : MonoBehaviour
+                          {
+                              public static TutorialAnimation Instance;
+                              private Animator _tutorialAnimator;
+                              [SerializeField]
+                              private Animator _tutorialPanelAnimator;
+                              [SerializeField]
+                              private Animator _tutorialContinueButtonAnimator;
+                          
+                              private int _currentAnimation;
+                              private static readonly int Property = Animator.StringToHash("01");
+                              private static readonly int Property1 = Animator.StringToHash("02");
+                              private static readonly int Property2 = Animator.StringToHash("03");
+                              private static readonly int Property3 = Animator.StringToHash("04");
+                              private static readonly int TutorialContinueBlinking = Animator.StringToHash("TutorialContinueBlinking");
+                              private static readonly int Panel01 = Animator.StringToHash("Panel01");
+                              private static readonly int Property4 = Animator.StringToHash("05");
+                              private static readonly int Panel02 = Animator.StringToHash("Panel02");
+                              private static readonly int Property5 = Animator.StringToHash("06");
+                              private static readonly int Property6 = Animator.StringToHash("07");
+                              private static readonly int Property7 = Animator.StringToHash("08");
+                          
+                              private void Awake()
+                              {
+                                  if (Instance != null && Instance != this)
+                                  {
+                                      Destroy(this);
+                                  }
+                                  else
+                                  {
+                                      Instance = this;
+                                  }
+                              }
+                          
+                              private void Start()
+                              {
+                                  _tutorialAnimator = GetComponent<Animator>();        
+                              }
+                          
+                              public void PlayTutorialAnimation()
+                              {
+                                  _currentAnimation++;
+                                  switch (_currentAnimation)
+                                  {
+                                      case 1:
+                                          return;
+                                      case 2:
+                                          _tutorialAnimator.SetBool(Property, true);
+                                          break;
+                                      case 3:
+                                          _tutorialAnimator.SetBool(Property1, true);
+                                          break;
+                                      case 4:
+                                          _tutorialAnimator.SetBool(Property2, true);
+                                          break;
+                                      case 5:
+                                          _tutorialAnimator.SetBool(Property3, true);
+                                          _tutorialContinueButtonAnimator.SetBool(TutorialContinueBlinking, true);
+                                          break;
+                                      case 6:
+                                          _tutorialPanelAnimator.SetBool(Panel01, true);
+                                          _tutorialAnimator.SetBool(Property4, true);
+                                          _tutorialContinueButtonAnimator.SetBool(TutorialContinueBlinking, false);
+                                          break;
+                                      case 7:
+                                          _tutorialContinueButtonAnimator.SetBool(TutorialContinueBlinking, true);
+                                          break;
+                                      case 8:
+                                          _tutorialPanelAnimator.SetBool(Panel02, true);
+                                          _tutorialContinueButtonAnimator.SetBool(TutorialContinueBlinking, false);
+                                          break;
+                                      case 9:
+                                          _tutorialPanelAnimator.SetBool(Panel02, false);
+                                          break;
+                                      case 14:
+                                          _tutorialContinueButtonAnimator.SetBool(TutorialContinueBlinking, true);
+                                          _tutorialAnimator.SetBool(Property5, true);
+                                          break;
+                                      case 15:
+                                          _tutorialAnimator.SetBool(Property6, true);
+                                          break;
+                                      case 16:
+                                          _tutorialAnimator.SetBool(Property7, true);
+                                          break;
+                                  }
+                              }
+                          }
+                        </code>
+                      </pre>
                     </div>
-                    <div
+
+                    <button
                       class="expand-button"
                       onclick="toggleCodeVisibility(this)"
+                      style="
+                        cursor: pointer;
+                        background-color: #3dafe6;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 0;
+                        text-align: center;
+                        padding: 0 12px;
+                      "
                     >
-                      Show More
-                    </div>
+                      Show more
+                    </button>
                   </div>
                   <!--This-->
+
+                  <!--This-->
+                  <div
+                    class="csharp-code-container"
+                    style="position: relative; text-align: center; padding-top: 1.2em;"
+                  >
+                    <h1
+                      style="
+                        text-align: left;
+                        color: rgb(236, 246, 201);
+                        font-weight: 500;
+                      "
+                    >
+                      Playing the background music depending on the scene.
+                    </h1>
+                    <div
+                      style="
+                        position: relative;
+                        margin-left: -320px;
+                        text-align: center;
+                      "
+                    >
+                      <pre
+                        class="csharp-code language-csharp"
+                        style="overflow-y: hidden"
+                      >
+                      <!--The code here -->
+                        <code>
+                          using System.Collections.Generic;
+                          using UnityEngine;
+                          using UnityEngine.SceneManagement;
+
+                          public class BackgorundMusic : MonoBehaviour
+                          {
+                              [SerializeField]
+                              private AudioSource _backgroundAudioSource;
+                              [SerializeField]
+                              private List<AudioClip> _backgroundMusics;
+
+                              private string _currentScene;
+
+                              private void Start()
+                              {
+                                  GetCurrentSceneName();
+                                  ChooseCurrentBackgroundMusic();
+                              }
+
+                              private void ChooseCurrentBackgroundMusic()
+                              {
+                                  switch (_currentScene)
+                                  {
+                                      case "MainMenu":
+                                          _backgroundAudioSource.clip = _backgroundMusics[0];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                      case "London":
+                                          _backgroundAudioSource.clip = _backgroundMusics[1];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                      case "Cairo":
+                                          _backgroundAudioSource.clip = _backgroundMusics[2];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                      case "Kyoto":
+                                          _backgroundAudioSource.clip = _backgroundMusics[3];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                      case "LondonTutorial":
+                                          _backgroundAudioSource.clip = _backgroundMusics[1];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                      default:
+                                          _backgroundAudioSource.clip = _backgroundMusics[0];
+                                          _backgroundAudioSource.Play();
+                                          break;
+                                  }
+                              }
+
+                              private void GetCurrentSceneName()
+                              {
+                                  _currentScene = SceneManager.GetActiveScene().name;
+                              }
+                          }
+
+                        </code>
+                      </pre>
+                    </div>
+
+                    <button
+                      class="expand-button"
+                      onclick="toggleCodeVisibility(this)"
+                      style="
+                        cursor: pointer;
+                        background-color: #3dafe6;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 0;
+                        text-align: center;
+                        padding: 0 12px;
+                      "
+                    >
+                      Show more
+                    </button>
+                  </div>
+                  <!--This-->
+
+                  <!--This-->
+                  <div
+                    class="csharp-code-container"
+                    style="position: relative; text-align: center; padding-top: 1.2em;"
+                  >
+                    <h1
+                      style="
+                        text-align: left;
+                        color: rgb(236, 246, 201);
+                        font-weight: 500;
+                      "
+                    >
+                      Triggering SFX depending on the frogs state change.
+                    </h1>
+                    <div
+                      style="
+                        position: relative;
+                        margin-left: -320px;
+                        text-align: center;
+                      "
+                    >
+                      <pre
+                        class="csharp-code language-csharp"
+                        style="overflow-y: hidden"
+                      >
+                      <!--The code here -->
+                        <code>
+                          using UnityEngine;
+                          public class PlayFrogSFX : MonoBehaviour
+                          {
+                              FrogSM sm;
+                              private void Start()
+                              {
+                                  sm = GetComponent<FrogSM>();
+                                  sm.OnAgentState += Sm_OnAgentState1;        
+                              }
+                              private void Sm_OnAgentState1(object sender, StateMachine.OnAgentStateEventArgs e)
+                              {
+                                  if (e.agentState == sm.attackingState)
+                                  {
+                                      AudioClip _currentSfx = sm.currentFrogSO.attack;
+                                      FrogsSFX.Instance.PlaySFX(_currentSfx, sm.currentFrogSO.frogName);
+                                  }
+                              }
+                              public void OnFrogJumps()
+                              {
+                                  AudioClip _jumpingSFX = sm.currentFrogSO.jump;
+                                  FrogsSFX.Instance.PlaySFX(_jumpingSFX, sm.currentFrogSO.frogName);
+                              }
+                          }                 
+                        </code>
+                      </pre>
+                    </div>
+
+                    <button
+                      class="expand-button"
+                      onclick="toggleCodeVisibility(this)"
+                      style="
+                        cursor: pointer;
+                        background-color: #3dafe6;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 0;
+                        text-align: center;
+                        padding: 0 12px;
+                      "
+                    >
+                      Show more
+                    </button>
+                  </div>
+                  <!--This-->
+
+
                 </section>
                 <!-- Code snippets  -->
               </div>
@@ -691,6 +993,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-    <script src="testing.js"></script>
+    <script src="assets/js/collapsecode.js"></script>
   </body>
 </html>

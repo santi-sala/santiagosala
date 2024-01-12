@@ -10,8 +10,7 @@
 }
 
 .csharp-code {
-  max-height: 300px; /* Adjust the initial height as needed */
-  overflow-y: hidden;
+  max-height: 400px; /* Adjust the initial height as needed */
   overflow-x: auto;
   transition: max-height 0.3s ease-in-out;
   border: 1px solid #ddd;
@@ -24,20 +23,6 @@
   display: block;
   padding-left: 2.5em; /* Adjust the padding as needed */
   position: relative;
-}
-
-.csharp-code code::before {
-  content: ""; /* Empty content to create a space for line numbers */
-  display: inline-block;
-  width: 2em; /* Adjust the width as needed */
-  margin-right: 1em; /* Adjust the margin as needed */
-  text-align: right;
-  color: #999;
-  counter-increment: linenumber; /* Increment line numbers */
-}
-
-.csharp-code code::after {
-  content: counter(linenumber); /* Display line numbers */
 }
 
 .expand-button {

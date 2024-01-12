@@ -2,16 +2,16 @@ function toggleCodeVisibility(button) {
   var codeContainer = button.parentElement.querySelector(".csharp-code");
   var expandButton = button;
 
-  if (codeContainer.style.maxHeight) {
-    // Code is currently visible, hide it
-    codeContainer.style.maxHeight = null;
+  if (codeContainer.classList.contains("expanded")) {
+    // Code is currently visible, hide it to the initial height
+    codeContainer.style.maxHeight = "15em"; // Adjust the height as needed
     expandButton.textContent = "Show More";
-    expandButton.classList.remove("show-less");
+    codeContainer.classList.remove("expanded");
   } else {
-    // Code is currently hidden, show it
+    // Code is currently hidden, show the entire code
     codeContainer.style.maxHeight = codeContainer.scrollHeight + "px";
     expandButton.textContent = "Show Less";
-    expandButton.classList.add("show-less");
+    codeContainer.classList.add("expanded");
   }
 
   // Re-run Prism for syntax highlighting after toggling visibility
@@ -19,9 +19,10 @@ function toggleCodeVisibility(button) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initially, show the initial portion of each code block
+  // Initially, show at least 10 lines of each code block
   var codeContainers = document.querySelectorAll(".csharp-code");
   codeContainers.forEach(function (codeContainer) {
-    codeContainer.style.maxHeight = codeContainer.scrollHeight + "px";
+    codeContainer.style.maxHeight = "15em"; // Adjust the height as needed
+    codeContainer.classList.remove("expanded");
   });
 });
