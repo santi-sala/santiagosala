@@ -142,13 +142,16 @@
                   </h3>
                   <ul style="margin-bottom: 0px">
                     <li>
-                      <span class="fa fa-user" style="padding-right: 3px; padding-left: 4px;"> </span> My roles: Animator, UI/Ux design and implementation, Audio Implementation, Support
+                      <span class="fa fa-building" style="padding-right: 3px; padding-left: 4px;"> </span> Company: <a href="https://addinspiration.com/" target="_blank">Add Inspiration</a> 
+                    </li>
+                    <li></li>
+                      <span class="fa fa-user" style="padding-right: 3px; padding-left: 4px;"> </span> My roles: Animator, UI/Ux design and Unity Implementation
                     </li>
                     <li>
-                      <span class="fa fa-users" ="true"></span> Team size: 5
+                      <span class="fa fa-users" ="true"></span> Team size: 6
                     </li>
                     <li>
-                      <span class="fa fa-user-clock"></span> Time frame: 4
+                      <span class="fa fa-user-clock"></span> Time frame: From 06-2024 - Present
                       months
                     </li>
                     <li><span class="fa fa-cogs"></span> Engine: Unity</li>
@@ -160,8 +163,8 @@
                 
                 <!-- Animation  -->
                 <section
-                  id="buggeroff-animation"
-                  id="buggerOff-project-info"
+                  id="majestic-farmstay-animation"
+                  id="majestic-farmstay-project-info"
                   class="job-card"
                   style="
                     text-align: left;
@@ -183,14 +186,16 @@
                     Animator
                   </h3>
                   <p style="margin-top: 0">
-                    My main main role in the team. Once I received the sprites from the artist, I rigged them and animate them according to the vision of the artist and designer. Once all the animations are completed I implemented the logic in the animator which then are triggered by the behavioral tree. In this role I had constant communication with the aertist, designers and programmers.
+                    My main role in the team. I rigged and animate all the characters of the game, including the UI and effects.
                   </p>
                   <!--Animation Screenshots-->
                   <div
-                    id="buggerOff-gallery"
+                    id="majestic-farmstay-gallery"
                     class="gallery"
                     style="margin-bottom: 0"
                   >
+                  <!--
+                  
                     <article class="from-left">
                       <div style="padding: 2.5px">
                         <a
@@ -240,6 +245,7 @@
                       </div>
                     </article>                    
                   <!--Animation Screenshots-->
+                
                 </section>
                 <!-- Animation  -->
 
@@ -264,13 +270,18 @@
                      letter-spacing: 0.05em;
                    "
                  >
-                   UI Designer
+                   UI/UX Designer
                  </h3>
                  <p style="margin-top: 0">
-                   As the UI designer I created visual aids for the team members to understand better the structure and flow of the different screens and buttons. This provided a better idea of the flow of the game and made the implementation of the UI easier and faster.
+                   As the UI designer I created visual aids for the team members to understand better the structure and flow of the different screens and buttons. I also implemented the UI in Unity to adapt to the diverse range of screen sizes of mobile devices, including tablets.
                  </p>
 
+                 
+                 
+
                  <!--UI/UX Screenshots-->
+                 <!--
+                 
                  <div
                  id="buggerOff-gallery"
                  class="gallery"
@@ -323,12 +334,14 @@
                          alt="Implementing the frog selection UI."
                      /></a>
                    </div>
-                 </article>                    
+                 </article>    
+                 -->                
                <!--UIUX Screenshots-->
                </section>
                <!-- UI UX  -->
 
                 <!-- Shaders -->
+                 <!--
                 <section
                   id="buggeroff-tutorial"
                   class="job-card"
@@ -359,7 +372,10 @@
                   >
                     For the project i also created some shaders and implemented some particles and post processing effects for the weather scenes.
                   </p>
+                
+
                   <!--Shaders Screenshots-->
+                  <!--
                  <div
                  id="buggerOff-gallery"
                  class="gallery"
@@ -438,274 +454,12 @@
                   </div>
                 </article>                
                <!--Shaders Screenshots-->
+
                 </section>
+
                 <!-- Shaders  -->
-
-                <!-- Code anippets  -->
-                <section
-                  id="buggeroff-code-snippet"
-                  class="job-card"
-                  style="
-                    text-align: left;
-                    background-color: rgb(95, 85, 85);
-                    padding: 1em;
-                    border-radius: 25px 0px 25px 0px;
-                    font-size: 1.2em;
-                  "
-                >
-                  <h3
-                    style="
-                      font-size: 1.5em;
-                      padding-bottom: 0.5em;
-                      text-align: center;
-                      letter-spacing: 0.05em;
-                    "
-                  >
-                    Code Snippets
-                  </h3>
-                  <p style="margin-top: 0">
-                    In the project I got to implement the sounds and some of the UI. The background music and SFX are being played in different channels that the player can conrol.
-                  </p>
-
-                  <!--This-->
-                  <div
-                    class="csharp-code-container"
-                    style="position: relative; text-align: center; padding-top: 1em;"
-                  >
-                    <h1
-                      style="
-                        text-align: left;
-                        color: rgb(236, 246, 201);
-                        font-weight: 500;
-                      "
-                    >
-                      Controlling the background music depending on the selected scene.
-                    </h1>
-                    <div
-                      style="
-                        position: relative;
-                        margin-left: -320px;
-                        text-align: center;
-                      "
-                    >
-                      <pre
-                        class="csharp-code language-csharp"
-                        style="overflow-y: hidden"
-                      >
-                      <!--The code here -->
-                        <code>
-                          public class BackgroundMusicController : MonoBehaviour
-                          {
-                              [SerializeField] AudioClip[] _backgroundMusic;
-                          
-                              private AudioSource _audioSource;
-                              [SerializeField] public AudioMixer _audioMixer;
-                          
-                              private void Start()
-                              {
-                                  _audioSource = GetComponent<AudioSource>();
-                                  _audioSource.clip = GetSceneBackgroundMusic();
-                                  _audioSource.Play();
-                                  if (_audioMixer != null)
-                                  {
-                                      _audioMixer.SetFloat("BackgroundMusic", Mathf.Log10(PlayerPrefs.GetFloat("BackgroundMusic")) * 20);
-                                      _audioMixer.SetFloat("Sfx", Mathf.Log10(PlayerPrefs.GetFloat("Sfx")) * 20);
-                                  }        
-                              }
-                          
-                              private AudioClip GetSceneBackgroundMusic()
-                              {
-                                  string sceneName = SceneManager.GetActiveScene().name;
-                                  Debug.Log("Scene name int: " + sceneName);
-                          
-                                  int scene = 0;
-                                  if (sceneName.Contains("London"))
-                                  {
-                                      scene = 1;
-                                  }
-                                  else if (sceneName.Contains("Cairo"))
-                                  {
-                                      scene = 2;
-                                  }
-                                  else if (sceneName.Contains("Kyoto"))
-                                  {
-                                      scene = 3;
-                                  }
-                                  else if (sceneName.Contains("World"))
-                                  {
-                                      scene = 4;
-                                  }
-                                          
-                                  switch (scene)
-                                  {
-                                      case 0:
-                                          return _backgroundMusic[0];
-                                      case 1:
-                                          return _backgroundMusic[1];
-                                      case 2:
-                                          return _backgroundMusic[2];
-                                      case 3:
-                                          return _backgroundMusic[3];
-                                      case 4:
-                                          return _backgroundMusic[4];
-                                      default:
-                                          return _backgroundMusic[_backgroundMusic.Length - 1];      
-                                  }
-                              }
-                          }
-                        </code>
-                      </pre>
-                    </div>
-
-                    <button
-                      class="expand-button"
-                      onclick="toggleCodeVisibility(this)"
-                      style="
-                        cursor: pointer;
-                        background-color: #3dafe6;
-                        color: #fff;
-                        border: none;
-                        border-radius: 4px;
-                        outline: none;
-                        position: absolute;
-                        bottom: 8px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        margin-top: 0;
-                        text-align: center;
-                        padding: 0 12px;
-                      "
-                    >
-                      Show more
-                    </button>
-                  </div>
-                  <!--This-->
-
-                  <!--This-->
-                  <div
-                    class="csharp-code-container"
-                    style="position: relative; text-align: center; padding-top: 1.2em;"
-                  >
-                    <h1
-                      style="
-                        text-align: left;
-                        color: rgb(236, 246, 201);
-                        font-weight: 500;
-                      "
-                    >
-                      Setting up the frog's information depending on what is selected.
-                    </h1>
-                    <div
-                      style="
-                        position: relative;
-                        margin-left: -320px;
-                        text-align: center;
-                      "
-                    >
-                      <pre
-                        class="csharp-code language-csharp"
-                        style="overflow-y: hidden"
-                      >
-                      <!--The code here -->
-                        <code>
-                          public class FrogSelectionUI : MonoBehaviour, IPointerDownHandler
-                          {
-                              private FrogSO _frogSO;
-                              private GameObject _frogWheel;
-                              private GameObject _description;
-
-                              FrogChangeSelection _frogChangeSelection;
-
-                              private void Start()
-                              {
-                                  _frogChangeSelection = transform.parent.parent.parent.GetComponent<FrogChangeSelection>();
-                                  print(gameObject.name);
-                              }
-                              public void OnPointerDown(PointerEventData eventData)
-                              {
-                                  if(ChangeFrogUIManager.Instance.frogWheelSelection != null)
-                                  {
-                                      ChangeFrogUIManager.Instance.frogWheelSelection.frogSO = _frogSO;
-                                      ChangeFrogUIManager.Instance.frogWheelSelection.ChangeInfo?.Invoke();
-                                  }
-                                  SetFrogTitle();
-                                  SetFrogPrice();
-                                  SetFrogStats();
-                                  SetFrogDescription();
-                                  _frogChangeSelection.OnFrogSelected(gameObject);
-                              }
-
-                              private void SetFrogDescription()
-                              {
-                                  _description.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = _frogSO.visualSO.userInterface.UIShopTextInfo;
-                              }
-
-                              private void SetFrogStats()
-                              {
-                                  GameObject[] stats = new GameObject[_description.transform.GetChild(1).childCount];
-
-                                  for (int i = 0; i < stats.Length; i++)
-                                  {
-                                      stats[i] = _description.transform.GetChild(1).GetChild(i).gameObject;
-                                  }
-
-                                  stats[0].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.discipline.ToString();
-                                  stats[1].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.damage.ToString();
-                                  stats[2].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.range.ToString();
-                                  stats[3].transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.attackSpeed.ToString();
-                              }
-
-                              private void SetFrogPrice() 
-                              {
-                                  _description.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.cost.ToString();
-                              }
-
-                              public void SetFrogSO(FrogSO frogSO)
-                              {
-                                _frogSO = frogSO;
-                              }
-
-                              public void SetFrogWheel(GameObject frogWheel)
-                              {
-                                  _frogWheel = frogWheel;
-                                  _description = frogWheel.transform.GetChild(0).GetChild(1).gameObject;
-                              }
-
-                              private void SetFrogTitle()
-                              {
-                                  _frogWheel.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = _frogSO.logicSO.frogName;
-                              }
-                          }
-                        </code>
-                      </pre>
-                    </div>
-
-                    <button
-                      class="expand-button"
-                      onclick="toggleCodeVisibility(this)"
-                      style="
-                        cursor: pointer;
-                        background-color: #3dafe6;
-                        color: #fff;
-                        border: none;
-                        border-radius: 4px;
-                        outline: none;
-                        position: absolute;
-                        bottom: 8px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        margin-top: 0;
-                        text-align: center;
-                        padding: 0 12px;
-                      "
-                    >
-                      Show more
-                    </button>
-                  </div>
-                  <!--This-->
-
-                </section>
-                <!-- Code snippets  -->
+                
+                
               </div>
             </header>
           </section>
